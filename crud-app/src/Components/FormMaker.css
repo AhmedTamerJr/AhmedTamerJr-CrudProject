@@ -1,0 +1,9 @@
+.Form input{
+    padding: 5px 10px;
+}
+.Form .Submit{
+    margin-left: 10px ;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.322);
+    cursor: pointer;
+} 

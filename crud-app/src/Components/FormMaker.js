@@ -1,13 +1,14 @@
 import React from 'react'
+import"./FormMaker.css"
 function FormMaker(props) {
- 
+
   return (
-    <form onSubmit={props.createElement}>
+    <form className='Form' onSubmit={props.createElement}>
         <input type="text"
             onChange={props.handleChange}
             value={props.clearing} 
             placeholder="Enter name"/>
-        <input type="submit" />
+        <input type="submit" className='Submit'/>
     </form>
   )
 }

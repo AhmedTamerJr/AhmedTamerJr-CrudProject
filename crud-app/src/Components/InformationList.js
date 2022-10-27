@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-
+import "./InformationList.css"
+import {BsFillTrash2Fill} from"react-icons/bs"
+import{AiTwotoneEdit} from "react-icons/ai"
 function InformationList(props) {
 
   const [toggle,setToggle]=useState(false)
@@ -21,16 +23,16 @@ const submission=(e)=>{
   handleToggle()
 }
   const showData=()=>{
-   return <div >
-      <input type="text" defaultValue={props.names}/>
-      <input type="button" value="Edit" onClick={handleToggle}/>
-      <input type="button" value="Delete"onClick={props.handleDelete}/>
+   return <div className='Show'>
+      <input className='type' type="text" defaultValue={props.names}/>
+      <button className='btn Edit' onClick={handleToggle}><AiTwotoneEdit/></button>
+      <button className='btn Delete'  onClick={props.handleDelete}><BsFillTrash2Fill/></button>
     </div>
   }
   const editData=()=>{
-    return <form onSubmit={submission}>
+    return <form className='Form' onSubmit={submission}>
        <input type="text" onChange={geter}/>
-       <input type="submit"  />
+       <input type="submit" className='Submit' />
      </form>
    }
 
